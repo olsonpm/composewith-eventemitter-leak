@@ -3,8 +3,21 @@ var generators = require('yeoman-generator');
 module.exports = generators.Base.extend({
     'constructor': function constructor() {
             generators.Base.apply(this, arguments);
+
+            this.option('includeTenthGenerator', {
+                required: false
+                , desc: "Without setting moreMaxListeners, this will cause the EventEmitter warning."
+            });
+            this.option('moreMaxListeners', {
+                required: false
+                , desc: "Increases the EventEmitter.defaultMaxListeners to 20 from 10, removing the EventEmitter warning if includeTenthGenerator is set."
+            });
         }
     , 'initialize': function initialize() {
+        if (this.options.moreMaxListeners) {
+            require('events').EventEmitter.defaultMaxListeners = 20;
+        }
+
         this.composeWith('testing1', {}, {
             local: require.resolve('generator-testing1')
         });
@@ -32,8 +45,10 @@ module.exports = generators.Base.extend({
         this.composeWith('testing9', {}, {
             local: require.resolve('generator-testing9')
         });
-        this.composeWith('testing10', {}, {
-            local: require.resolve('generator-testing10')
-        });
+        if (this.options.includeTenthGenerator) {
+            this.composeWith('testing10', {}, {
+                local: require.resolve('generator-testing10')
+            });
+        }
     }
 });

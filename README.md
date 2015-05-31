@@ -4,7 +4,7 @@ To test the eventemitter leak
 ```
 git clone git@github.com:olsonpm/composewith-eventemitter-leak.git
 cd generator-base
-./install-local-generators.sh
+npm install
 npm install --save --global .
 
 # assuming you don't have ~/tmp.d/yeoman, let's make a temporary dir to test the generator
