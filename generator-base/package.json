@@ -1,0 +1,33 @@
+{
+  "name": "generator-base",
+  "version": "1.0.0",
+  "description": "reproduces issue 778",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olsonpm/composewith-eventemitter-leak.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olsonpm/composewith-eventemitter-leak/issues"
+  },
+  "homepage": "https://github.com/olsonpm/composewith-eventemitter-leak#readme",
+  "dependencies": {
+    "generator-testing1": "file:../generator-testing1",
+    "generator-testing10": "file:../generator-testing10",
+    "generator-testing11": "file:../generator-testing11",
+    "generator-testing2": "file:../generator-testing2",
+    "generator-testing3": "file:../generator-testing3",
+    "generator-testing4": "file:../generator-testing4",
+    "generator-testing5": "file:../generator-testing5",
+    "generator-testing6": "file:../generator-testing6",
+    "generator-testing7": "file:../generator-testing7",
+    "generator-testing8": "file:../generator-testing8",
+    "generator-testing9": "file:../generator-testing9",
+    "yeoman-generator": "^0.20.1"
+  }
+}
