@@ -3,7 +3,7 @@
 To test the eventemitter leak
 ```
 git clone git@github.com:olsonpm/composewith-eventemitter-leak.git
-cd generator-base
+cd composewith-eventemitter-leak/generator-base
 npm install
 npm install --global .
 
